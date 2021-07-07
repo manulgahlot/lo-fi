@@ -1,0 +1,27 @@
+body, html {
+  /* position: relative; */
+  height: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  /* background-color: rgb(252, 209, 18);
+  color: rgb(138, 196, 206); */
+  background-color: rgba(180, 156, 156, 0.5);
+  /* opacity: 0.5; */
+}
+
+.bg-change {
+  background-image: url("images/1.jpg");
+  /* filter: blur(0.5px);
+  -webkit-filter: blur(0.5px); */
+  height: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-header, .card-body {
+  background-color: #F9F9F9;
+}
