@@ -94,6 +94,9 @@ function toast() {
   );
 }
 
+// Audio files
+var click_sound = new Audio("click.mp3");
+var bell = new Audio("bell.mp3");
 
 var start_minutes = 25;
 var start_seconds = "00";
@@ -108,6 +111,7 @@ $("#playButton").click (function() {
 });
 
 function timerStart() {
+  click_sound.play();
     start_minutes = 24;
     start_seconds = 59;
 
@@ -138,7 +142,7 @@ function timerStart() {
         clearInterval(second_interval);
         $('.modal').modal('show');
         // document.getElementById('mainButton').replaceWith(<a  onclick="index.html" id="playButton" class="btn btn-outline-success"><i class="fa fa-repeat" aria-hidden="true">Repeat</i></a>)
-        
+        bell.play();
       }
       start_seconds = 60;
   }
