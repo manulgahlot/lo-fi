@@ -86,8 +86,8 @@ if (image.classList && image && button) {
     };
 }
 
-var click_sound = new Audio("audio/click.mp3")
-var bell = new Audio("audio/bell.mp3");
+var click_sound = new Audio("click.mp3")
+var bell = new Audio("bell.mp3");
 
 function toast() {
   $('toastBtn').click(
