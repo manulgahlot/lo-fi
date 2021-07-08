@@ -38,16 +38,16 @@ var images = ["1.gif", "2.gif", "3.gif", "4.gif"];
 // });
 //
 
-
+// var study_loFI = new Audio("https://www.youtube.com/watch?v=pLcw3dK1yU0");
 
 
 
   $("#pButton").click(function() {
        $("#pButton span").html(
        $("#pButton span").html() ==
-       '<i class="fa fa-pause" aria-hidden="true"></i>' ?
-       '<i class="fa fa-play" aria-hidden="true"></i>' :
-       '<i class="fa fa-pause" aria-hidden="true"></i>');
+       '<i onclick="pauseAudio()" class="fa fa-pause" aria-hidden="true"></i>' ?
+       '<i onclick="playAudio()" class="fa fa-play" aria-hidden="true"></i>' :
+       '<i onclick="pauseAudio()" class="fa fa-pause" aria-hidden="true"></i>');
   });
 
 
@@ -62,12 +62,12 @@ var images = ["1.gif", "2.gif", "3.gif", "4.gif"];
     x.pause();
   };
 
-  x.addEventListener('ended',function(){
-    // x.pause();
-     x.src = "audio/herbal-tea.mp3";
-     x.load();
-     x.play();
-    });
+  // study_loFI.addEventListener('ended',function(){
+  //   // x.pause();
+  //    x.src = "audio/herbal-tea.mp3";
+  //    x.load();
+  //    x.play();
+  //   });
 
 
 
@@ -86,7 +86,8 @@ if (image.classList && image && button) {
     };
 }
 
-
+var click_sound = new Audio("audio/click.mp3")
+var bell = new Audio("audio/bell.mp3");
 
 function toast() {
   $('toastBtn').click(
@@ -94,9 +95,6 @@ function toast() {
   );
 }
 
-// Audio files
-var click_sound = new Audio("click.mp3");
-var bell = new Audio("bell.mp3");
 
 var start_minutes = 25;
 var start_seconds = "00";
@@ -111,9 +109,10 @@ $("#playButton").click (function() {
 });
 
 function timerStart() {
-  click_sound.play();
     start_minutes = 24;
     start_seconds = 59;
+
+    click_sound.play();
 
   document.getElementById('minutes').innerHTML = start_minutes;
   document.getElementById('seconds').innerHTML = start_seconds;
@@ -150,8 +149,16 @@ function timerStart() {
    
 };
 
+function clear() {
+  document.getElementById("toastBtn").innerHTML = "";
+}
 
+$(window).resize(function(){
+  if(window.innerWidth < 600) {
+      $("#toastBtn").clear();
 
+  }
+});
      // 
     // bedtime after a coffee by Barradeen | https://soundcloud.com/barradeen/
     // Creative Commons Attribution-ShareAlike 3.0 Unported
