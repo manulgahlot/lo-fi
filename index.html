@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LOFI</title>
   <!-- <source src="audio/coffee.mp3" loop=" true" autostart= "true" width="2" height="0"> -->
   <link rel="stylesheet" href="home.css">
@@ -12,20 +13,24 @@
 </head>
 
 <body onload="template()">
+
+  <!-- <iframe width ="361" height="25" src="https://www.youtube.com/embed/pLcw3dK1yU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="false"></iframe> -->
+
   <audio id="myAudio">
-    <source src="audio/Bollywood Lo-Fi (hearthis.at).mp3" type="audio/mpeg">
+    <source src="audio/study.mp3" type="audio/mpeg">
     <!-- <source src="horse.mp3" type="audio/mpeg"> -->
     Your browser does not support the audio element.
   </audio>
   
   <div id="bg" class="bg-change">
     <nav class="navbar navbar-light">
-      <div class="container-fluid">
+      <div class="container-fluid d-flex justify-content-between">
         <a class="navbar-brand" href="#">Lo-Fi music</a>
-        <div id="pButton" ><span id="playB" class="navbar-brand  mx-auto"><i class="fa fa-play" aria-hidden="true"></i></span></div>
+        <div id="pButton" class="" ><span id="playB" class="navbar-brand  mx-auto"><i onclick="playAudio()" class="fa fa-play" aria-hidden="true"></i></span></div>
         
         <a class="navbar-brand" href="#">
-          <i onclick="toast()" id="toastBtn" alt="" width="30" height="24" class="bi bi-stopwatch d-inline-block align-text-top"> Pomodoro Timer</i>
+          <i onclick="toast()" id="toastBtn" alt="" width="30" height="24" class="bi bi-stopwatch d-inline-block align-text-top">Pomodoro Timer</i>
+          <!-- <i onclick="toast()" id="toastBtn phn" alt="" width="30" height="24" class="bi bi-stopwatch d-inline-block align-text-top"></i> -->
         </a>
       </div>
     </nav>
