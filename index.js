@@ -42,9 +42,9 @@ var images = ["1.gif", "2.gif", "3.gif", "4.gif"];
 
 
 
-  $("#pButton").click(function() {
-       $("#pButton span").html(
-       $("#pButton span").html() ==
+  $("#playB").click(function() {
+       $("#playB").html(
+       $("#playB").html() ==
        '<i onclick="pauseAudio()" class="fa fa-pause" aria-hidden="true"></i>' ?
        '<i onclick="playAudio()" class="fa fa-play" aria-hidden="true"></i>' :
        '<i onclick="pauseAudio()" class="fa fa-pause" aria-hidden="true"></i>');
@@ -62,6 +62,19 @@ var images = ["1.gif", "2.gif", "3.gif", "4.gif"];
     x.pause();
   };
 
+
+  $(document).on( 'keydown', function ( e ) {
+    if ( e.keyCode === 32 ) {
+        if (video.paused == true) {
+            // Play the video
+            x.play();
+        }else{
+            if(video.play == true){
+            x.pause();
+            }
+        }
+    }
+});
   // study_loFI.addEventListener('ended',function(){
   //   // x.pause();
   //    x.src = "audio/herbal-tea.mp3";
@@ -156,7 +169,6 @@ function clear() {
 $(window).resize(function(){
   if(window.innerWidth < 600) {
       $("#toastBtn").clear();
-
   }
 });
      // 
