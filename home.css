@@ -23,8 +23,45 @@ body, html {
   background-color: #F9F9F9;
 }
 
+
+.bottom-navbar {
+  background-color: rgba(179, 138, 138, 0.5);
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding-top: 10px !important;
+}
+
+.pButton {
+  padding: 0px;
+}
+
+.fa-play, .fa-pause, .fa-github {
+  height: 100%;
+  /* margin-left: 50px !important; */
+  font-size: 30px !important;
+}
+
+.fa-play, .fa-pause {
+  /* margin-left: 50%; */
+  color: #222119;
+  border: 2px solid transparent;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.fa-play, .fa-pause:hover {
+  /* color: #bae8e8; */
+  border: 2px solid #242c2c;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  border: none;
+}
 @media only screen and (max-width: 600px) {
-  .navbar {
+  .navbar, .bottom-navbar {
     padding-bottom: 8px;
   }
 }
