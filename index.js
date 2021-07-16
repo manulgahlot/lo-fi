@@ -75,12 +75,12 @@ var images = ["1.gif", "2.gif", "3.gif", "4.gif"];
         }
     }
 });
-  // study_loFI.addEventListener('ended',function(){
-  //   // x.pause();
-  //    x.src = "audio/herbal-tea.mp3";
-  //    x.load();
-  //    x.play();
-  //   });
+     x.addEventListener('ended',function(){
+    // x.pause();
+     x.src = "music2.mp3";
+     x.load();
+     x.play();
+    });
 
 
 
